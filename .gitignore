@@ -10,8 +10,12 @@
 
 # production
 /build
+
+# firebase
 /prod
 /.firebase
+.firebaserc
+firebase.json
 
 
 # misc
