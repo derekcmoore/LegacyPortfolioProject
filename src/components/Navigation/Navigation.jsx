@@ -17,8 +17,8 @@ export default class Navigation extends Component {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto flex-column side-nav">
             <div className="nav-title" href="#home">
-              <h2 className="mt-3">Derek</h2>
-              <h2 className="mt-1">Moore</h2>
+              <h2 className="ml-4 mt-3">Derek</h2>
+              <h2 className="ml-4 mt-1">Moore</h2>
             </div>
             <Nav.Link className="nav-item" href="#features">
               <FaUserAlt className="mr-4 ml-2 nav-user-icon" />

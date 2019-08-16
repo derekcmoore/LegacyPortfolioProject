@@ -9,42 +9,44 @@
   background-color: white;
   z-index: 999;
 }
+
 .nav-title {
-  text-align: center;
+  text-align: left;
   font-size: 24px;
   height: 5em;
+  color: #008073;
   background-color: rgb(253, 253, 253);
   border-bottom: 1px solid rgb(224, 224, 224);
 }
 
 .nav-user-icon {
   color: #55aadd;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .nav-project-icon {
   color: #55dd89;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .nav-skill-icon {
   color: #c255dd;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .nav-school-icon {
   color: #dda755;
-  font-size: 22px;
+  font-size: 26px;
 }
 
 .nav-resume-icon {
   color: #2c2c2c;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .nav-contact-icon {
   color: #8f6434;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .nav-item {
