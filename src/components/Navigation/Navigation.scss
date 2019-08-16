@@ -1,10 +1,43 @@
 .side-nav {
   position: fixed;
   position: fixed;
+  border-right: 1px solid rgb(224, 224, 224);
   width: 190px;
   height: calc(100% + 60px);
   top: 0;
   left: 0;
-  background-color: blue;
+  background-color: white;
   z-index: 999;
+}
+.nav-title {
+  text-align: center;
+  font-size: 24px;
+  height: 5em;
+  background-color: rgb(253, 253, 253);
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.nav-user-icon {
+  color: #55aadd;
+  font-size: 18px;
+}
+
+.nav-project-icon {
+  color: #55dd89;
+  font-size: 20px;
+}
+
+.nav-skill-icon {
+  color: #c255dd;
+  font-size: 20px;
+}
+
+.nav-school-icon {
+  color: #dda755;
+  font-size: 22px;
+}
+
+.nav-item {
+  border-bottom: 1px solid rgb(224, 224, 224);
+  font-size: 16px;
 }

@@ -1,6 +1,12 @@
 import React, { Component } from "react";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import "./Navigation.scss";
+import {
+  FaUserAlt,
+  FaFolder,
+  FaRegChartBar,
+  FaGraduationCap
+} from "react-icons/fa";
 export default class Navigation extends Component {
   render() {
     return (
@@ -8,20 +14,26 @@ export default class Navigation extends Component {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto flex-column side-nav">
-            <Navbar.Brand href="#home">Derek Moore</Navbar.Brand>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">About Me</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+            <div className="nav-title" href="#home">
+              <h2 className="mt-3">Derek</h2>
+              <h2 className="mt-1">Moore</h2>
+            </div>
+            <Nav.Link className="nav-item" href="#features">
+              <FaUserAlt className="mr-4 ml-2 nav-user-icon" />
+              About
+            </Nav.Link>
+            <Nav.Link className="nav-item" href="#pricing">
+              <FaRegChartBar className="mr-4 ml-2 nav-skill-icon" />
+              Skills
+            </Nav.Link>
+            <Nav.Link className="nav-item" href="#features">
+              <FaFolder className="mr-4 ml-2 nav-project-icon" />
+              Projects
+            </Nav.Link>
+            <Nav.Link className="nav-item" href="#pricing">
+              <FaGraduationCap className="mr-4 ml-2 nav-school-icon" />
+              Education
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
