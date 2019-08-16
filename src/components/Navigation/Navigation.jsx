@@ -5,7 +5,9 @@ import {
   FaUserAlt,
   FaFolder,
   FaRegChartBar,
-  FaGraduationCap
+  FaGraduationCap,
+  FaFileAlt,
+  FaEnvelope
 } from "react-icons/fa";
 export default class Navigation extends Component {
   render() {
@@ -33,6 +35,14 @@ export default class Navigation extends Component {
             <Nav.Link className="nav-item" href="#pricing">
               <FaGraduationCap className="mr-4 ml-2 nav-school-icon" />
               Education
+            </Nav.Link>
+            <Nav.Link className="nav-item" href="#pricing">
+              <FaEnvelope className="mr-4 ml-2 nav-contact-icon" />
+              Contact
+            </Nav.Link>
+            <Nav.Link className="nav-item" href="#pricing">
+              <FaFileAlt className="mr-4 ml-2 nav-resume-icon" />
+              Resume
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
