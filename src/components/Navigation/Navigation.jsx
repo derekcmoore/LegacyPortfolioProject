@@ -20,27 +20,27 @@ export default class Navigation extends Component {
               <h2 className="ml-4 mt-3">Derek</h2>
               <h2 className="ml-4 mt-1">Moore</h2>
             </div>
-            <Nav.Link className="nav-item" href="#features">
+            <Nav.Link className="nav-item" href="#about">
               <FaUserAlt className="mr-4 ml-2 nav-user-icon" />
               About
             </Nav.Link>
-            <Nav.Link className="nav-item" href="#pricing">
+            <Nav.Link className="nav-item" href="#skills">
               <FaRegChartBar className="mr-4 ml-2 nav-skill-icon" />
               Skills
             </Nav.Link>
-            <Nav.Link className="nav-item" href="#features">
+            <Nav.Link className="nav-item" href="#projects">
               <FaFolder className="mr-4 ml-2 nav-project-icon" />
               Projects
             </Nav.Link>
-            <Nav.Link className="nav-item" href="#pricing">
+            <Nav.Link className="nav-item" href="#education">
               <FaGraduationCap className="mr-4 ml-2 nav-school-icon" />
               Education
             </Nav.Link>
-            <Nav.Link className="nav-item" href="#pricing">
+            <Nav.Link className="nav-item" href="#contact">
               <FaEnvelope className="mr-4 ml-2 nav-contact-icon" />
               Contact
             </Nav.Link>
-            <Nav.Link className="nav-item" href="#pricing">
+            <Nav.Link className="nav-item" href="#resume">
               <FaFileAlt className="mr-4 ml-2 nav-resume-icon" />
               Resume
             </Nav.Link>

@@ -15,7 +15,7 @@
   font-size: 24px;
   height: 5em;
   color: #008073;
-  background-color: rgb(253, 253, 253);
+  background-color: rgb(248, 248, 248);
   border-bottom: 1px solid rgb(224, 224, 224);
 }
 
@@ -52,4 +52,24 @@
 .nav-item {
   border-bottom: 1px solid rgb(224, 224, 224);
   font-size: 16px;
+}
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+  box-shadow: -5px 0px 0px #55aadd inset;
+  background-color: rgb(248, 248, 248);
+  transition: all 0.3s ease-out;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  background-color: rgb(248, 248, 248);
+  padding-left: 1em;
+  transition: all 0.3s ease-out;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  transition: all 0.3s ease-out;
 }
