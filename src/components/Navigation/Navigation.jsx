@@ -12,7 +12,11 @@ import {
 export default class Navigation extends Component {
   render() {
     return (
-      <Navbar collapseOnSelect expand="lg" className="flex-column">
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        className="flex-column minimized-nav"
+      >
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto flex-column side-nav">
