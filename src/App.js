@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Navigation from "./components/Navigation/Navigation";
 import About from "./components/About/About";
-import Skills from "./components/About/About";
-import Projects from "./components/About/About";
-import Education from "./components/About/About";
-import Contact from "./components/About/About";
+import Skills from "./components/Skills/Skills";
+import Projects from "./components/Projects/Projects";
+import Education from "./components/Education/Education";
+import Contact from "./components/Contact/Contact";
 import "./App.scss";
 import $ from "jquery";
 

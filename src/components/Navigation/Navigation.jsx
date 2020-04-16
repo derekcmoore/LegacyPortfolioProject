@@ -7,13 +7,13 @@ import {
     FaRegChartBar,
     FaGraduationCap,
     FaFileAlt,
-    FaEnvelope
+    FaEnvelope,
 } from "react-icons/fa";
 export default class Navigation extends Component {
     constructor() {
         super();
         this.state = {
-            hash: window.location.hash
+            hash: window.location.hash,
         };
     }
 
@@ -38,6 +38,7 @@ export default class Navigation extends Component {
                 collapseOnSelect
                 expand="lg"
                 className="flex-column minimized-nav"
+                fixed="top"
             >
                 <h2 className="center-title">Derek Moore</h2>
                 <Navbar.Toggle

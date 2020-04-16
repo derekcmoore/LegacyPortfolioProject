@@ -1,6 +1,7 @@
 @media screen and (max-width: 991px) {
     .minimized-nav {
-        position: sticky !important;
+        position: sticky;
+        position: -webkit-sticky;
         width: 100%;
         border-bottom: 1px solid rgb(224, 224, 224);
         background-color: white;

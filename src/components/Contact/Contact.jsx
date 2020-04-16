@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./Skills.scss";
-export default class Skills extends Component {
-  render() {
-    return <h1 className="full-height">Test</h1>;
-  }
+import "./Contact.scss";
+export default class Contact extends Component {
+    render() {
+        return <h1 className="full-height">Contact</h1>;
+    }
 }
