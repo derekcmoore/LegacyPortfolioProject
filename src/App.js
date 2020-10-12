@@ -37,6 +37,12 @@ class App extends Component {
             }
         });
     }
+    constructor() {
+        super()
+        if (!window.location.hash) {
+            window.location.hash = "about";
+        }
+    }
 
     render() {
         this.getScrollLocation();
