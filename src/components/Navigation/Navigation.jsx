@@ -30,7 +30,7 @@ export default class Navigation extends Component {
         var elmnt = document.getElementById(hash);
         elmnt.scrollIntoView();
         if (window.innerWidth <= 991) {
-            window.scrollBy(0, -50);
+            window.scrollBy(0, -60);
         }
     }
 
