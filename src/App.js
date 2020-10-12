@@ -7,19 +7,20 @@ import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
 import "./App.scss";
 import $ from "jquery";
+import jQuery from "jquery";
 
 class App extends Component {
     getScrollLocation() {
-        $(document).ready(function() {
+        jQuery(function () {
             var sections = {};
 
-            $(".section").each(function() {
+            $(".section").each(function () {
                 var hash = $(this).data("hash"),
                     topOffset = $(this).offset().top;
                 sections[topOffset] = hash;
             });
 
-            $(window).scroll(function(e) {
+            $(window).on("scroll", function () {
                 var scrollTop = $(window).scrollTop();
                 setHash(scrollTop);
             });
@@ -42,29 +43,39 @@ class App extends Component {
         return (
             <div id="root">
                 <Navigation />
-                <section id="#about" className="section" data-hash="about">
-                    <About />
-                </section>
-                <section id="#skills" className="section" data-hash="skills">
-                    <Skills />
-                </section>
-                <section
-                    id="#projects"
-                    className="section"
-                    data-hash="projects"
-                >
-                    <Projects />
-                </section>
-                <section
-                    id="#education"
-                    className="section"
-                    data-hash="education"
-                >
-                    <Education />
-                </section>
-                <section id="#contact" className="section" data-hash="contact">
-                    <Contact />
-                </section>
+                <div className="content">
+                    <section id="#about" className="section" data-hash="about">
+                        <About />
+                    </section>
+                    <section
+                        id="#skills"
+                        className="section"
+                        data-hash="skills"
+                    >
+                        <Skills />
+                    </section>
+                    <section
+                        id="#projects"
+                        className="section"
+                        data-hash="projects"
+                    >
+                        <Projects />
+                    </section>
+                    <section
+                        id="#education"
+                        className="section"
+                        data-hash="education"
+                    >
+                        <Education />
+                    </section>
+                    <section
+                        id="#contact"
+                        className="section"
+                        data-hash="contact"
+                    >
+                        <Contact />
+                    </section>
+                </div>
             </div>
         );
     }
