@@ -54,8 +54,8 @@ export default class Navigation extends Component {
                         activeKey={this.state.hash}
                     >
                         <div className="nav-title">
-                            <h2 className="ml-4 mt-3">Derek</h2>
-                            <h2 className="ml-4 mt-1">Moore</h2>
+                            <h2 className="mt-3">Derek</h2>
+                            <h2 className="mt-1">Moore</h2>
                         </div>
                         <Nav.Link
                             className="nav-item"
