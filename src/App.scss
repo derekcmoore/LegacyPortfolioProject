@@ -13,22 +13,15 @@
 .section {
     height: 100vh;
     margin-left: 190px;
-    text-align: center;
-    h1 {
-        color: #5ad;
-        font-size: 100px;
-        font-weight: 500;
+
+    @media screen and (max-width: 991px) {
+        margin-left: 0;
     }
 }
 
 @media screen and (max-width: 991px) {
     .section {
         margin-left: 0;
-        h1 {
-            color: #5ad;
-            font-size: 50px;
-            font-weight: 500;
-        }
     }
 }
 

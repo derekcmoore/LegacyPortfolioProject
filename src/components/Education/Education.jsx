@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import Title from "../Title/Title";
 import "./Education.scss";
 export default class Education extends Component {
   render() {
-    return <h1 className="full-height">Education</h1>;
+    return <Title name="Education" backgroundcolor=" #dda755" />;
   }
 }

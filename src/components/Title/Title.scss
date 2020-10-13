@@ -1,0 +1,25 @@
+.title {
+    width: 60%;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    text-align: center;
+    justify-content: center;
+
+    @media screen and (max-width: 991px) {
+        position: sticky;
+        top: 3.55em;
+        z-index: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    h1 {
+        color: white;
+        font-size: 100px;
+        font-weight: 500;
+        @media screen and (max-width: 991px) {
+            font-size: 50px;
+            font-weight: 500;
+        }
+    }
+}
