@@ -20,10 +20,26 @@
     left: 0;
     background-color: white;
     z-index: 1;
+
+    @media screen and (max-width: 991px) {
+        position: fixed;
+        width: 100%;
+        margin-top: 3.55em;
+        height: inherit;
+    }
 }
 
 .center-title {
     display: none;
+
+    @media screen and (max-width: 991px) {
+        margin-left: 1em;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 24px;
+        font-weight: 500;
+        color: #008073;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -38,24 +54,8 @@
         background-color: white;
     }
 
-    .side-nav {
-        position: fixed;
-        width: 100%;
-        margin-top: 3.55em;
-        height: inherit;
-    }
-
     .collapsing {
         height: auto !important;
-    }
-
-    .center-title {
-        margin-left: 1em;
-        display: inline-block;
-        vertical-align: middle;
-        font-size: 24px;
-        font-weight: 500;
-        color: #008073;
     }
 
     .flex-column {
