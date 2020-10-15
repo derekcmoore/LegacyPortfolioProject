@@ -55,28 +55,28 @@ class App extends Component {
                     </section>
                     <section
                         id="#skills"
-                        className="section"
+                        className="section not-done"
                         data-hash="skills"
                     >
                         <Skills />
                     </section>
                     <section
                         id="#projects"
-                        className="section"
+                        className="section not-done"
                         data-hash="projects"
                     >
                         <Projects />
                     </section>
                     <section
                         id="#education"
-                        className="section"
+                        className="section not-done"
                         data-hash="education"
                     >
                         <Education />
                     </section>
                     <section
                         id="#contact"
-                        className="section"
+                        className="section not-done"
                         data-hash="contact"
                     >
                         <Contact />
