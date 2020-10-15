@@ -5,6 +5,7 @@ import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
+import Home from "./components/Home/Home";
 import "./App.scss";
 import $ from "jquery";
 import jQuery from "jquery";
@@ -33,15 +34,17 @@ class App extends Component {
                 }
                 if ("#" + hash !== window.location.hash) {
                     window.location.hash = hash;
+                    if (!hash) {
+                        let loc = window.location;
+                        window.history.pushState(
+                            "",
+                            document.title,
+                            loc.pathname + loc.search
+                        );
+                    }
                 }
             }
         });
-    }
-    constructor() {
-        super()
-        if (!window.location.hash) {
-            window.location.hash = "about";
-        }
     }
 
     render() {
@@ -50,33 +53,40 @@ class App extends Component {
             <div id="root">
                 <Navigation />
                 <div className="content">
-                    <section id="#about" className="section" data-hash="about">
+                    <section id="#home" className="section full-screen">
+                        <Home />
+                    </section>
+                    <section
+                        id="#about"
+                        className="section full-screen"
+                        data-hash="about"
+                    >
                         <About />
                     </section>
                     <section
                         id="#skills"
-                        className="section not-done"
+                        className="section full-screen"
                         data-hash="skills"
                     >
                         <Skills />
                     </section>
                     <section
                         id="#projects"
-                        className="section not-done"
+                        className="section full-screen"
                         data-hash="projects"
                     >
                         <Projects />
                     </section>
                     <section
                         id="#education"
-                        className="section not-done"
+                        className="section full-screen"
                         data-hash="education"
                     >
                         <Education />
                     </section>
                     <section
                         id="#contact"
-                        className="section not-done"
+                        className="section full-screen"
                         data-hash="contact"
                     >
                         <Contact />

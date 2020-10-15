@@ -1,0 +1,39 @@
+.home {
+    height: 100%;
+    background: #5ad url("../../assests/headshot.jpg") no-repeat top
+        center/cover;
+    position: relative;
+    .info {
+        position: relative;
+        h1 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 1em;
+            color: white;
+            font-weight: 200;
+
+            @media screen and (max-width: 991px) {
+                font-size: 25px;
+            }
+
+            .blue {
+                padding: 0 0.15em;
+                background-color: #5ad;
+            }
+
+            .underline {
+                border-bottom: 5px solid #5ad;
+            }
+        }
+    }
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}

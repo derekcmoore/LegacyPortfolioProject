@@ -10,10 +10,14 @@
     }
 }
 
+.info {
+    margin-left: 1em;
+}
+
 .section {
     margin-left: 190px;
 
-    &.not-done {
+    &.full-screen {
         height: 100vh;
     }
     @media screen and (max-width: 991px) {
