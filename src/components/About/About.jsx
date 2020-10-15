@@ -4,7 +4,7 @@ import "./About.scss";
 export default class About extends Component {
   render() {
     return (
-        <div>
+        <div className="info">
             <Title name="About" backgroundcolor="#55aadd" />
             <div></div>
         </div>

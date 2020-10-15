@@ -1,10 +1,10 @@
 .title {
     width: 100%;
     padding: 1em 2em;
-    
 
     @media screen and (max-width: 991px) {
         position: sticky;
+        padding: 0.5em 1em;
         top: 3.55em;
         z-index: 0;
         width: 100%;
@@ -16,7 +16,6 @@
         font-weight: 100;
         @media screen and (max-width: 991px) {
             font-size: 50px;
-            font-weight: 500;
         }
     }
 }
