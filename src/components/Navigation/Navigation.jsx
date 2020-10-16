@@ -107,7 +107,11 @@ export default class Navigation extends Component {
                             <FaEnvelope className="mr-4 ml-2 nav-contact-icon" />
                             Contact
                         </Nav.Link>
-                        <Nav.Link className="nav-item">
+                        <Nav.Link
+                            className="nav-item"
+                            href="https://drive.google.com/file/d/1Veu_QtFvVDHkhuQtoAa9syTdeUcSMlRS/view?usp=sharing"
+                            target="_blank"
+                        >
                             <FaFileAlt className="mr-4 ml-2 nav-resume-icon" />
                             Resume
                         </Nav.Link>
