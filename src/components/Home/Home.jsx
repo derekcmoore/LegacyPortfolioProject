@@ -11,7 +11,7 @@ export default class Home extends Component {
                         <br />
                         the lives of
                         <br />
-                        others &nbsp;
+                        others&nbsp;
                         <span className="underline">through software</span>
                     </h1>
                 </div>
