@@ -29,11 +29,10 @@ class App extends Component {
             function setHash(st) {
                 var hash = "";
                 for (var section in sections) {
-                    if (section < st + $(window).height() / 2)
+                    if (section < st + $(window).height() / 4)
                         hash = sections[section];
                 }
                 if ("#" + hash !== window.location.hash) {
-                    window.location.hash = hash;
                     if (!hash) {
                         let loc = window.location;
                         window.history.pushState(
@@ -41,6 +40,8 @@ class App extends Component {
                             document.title,
                             loc.pathname + loc.search
                         );
+                    } else {
+                        window.location.hash = hash;
                     }
                 }
             }
