@@ -29,7 +29,7 @@ class App extends Component {
             function setHash(st) {
                 var hash = "";
                 for (var section in sections) {
-                    if (section < st + $(window).height() / 4)
+                    if (section < st + $(window).height() / 3.5)
                         hash = sections[section];
                 }
                 if ("#" + hash !== window.location.hash) {

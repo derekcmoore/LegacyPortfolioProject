@@ -19,6 +19,7 @@ export default class Navigation extends Component {
 
     componentDidMount() {
         window.addEventListener("hashchange", this.changeState, false);
+        if (window.location.hash !== "") this.jumpToPage(window.location.hash);
     }
 
     changeState = () => {
