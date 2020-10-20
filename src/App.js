@@ -34,6 +34,7 @@ class App extends Component {
                 }
                 if ("#" + hash !== window.location.hash) {
                     if (!hash && window.location.hash !== "") {
+                        window.location.hash = "home";
                         let loc = window.location;
                         window.history.pushState(
                             "",
