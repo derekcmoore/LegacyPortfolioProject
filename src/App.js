@@ -33,14 +33,14 @@ class App extends Component {
                         hash = sections[section];
                 }
                 if ("#" + hash !== window.location.hash) {
-                    if (!hash) {
+                    if (!hash && window.location.hash !== "") {
                         let loc = window.location;
                         window.history.pushState(
                             "",
                             document.title,
                             loc.pathname + loc.search
                         );
-                    } else {
+                    } else if (hash) {
                         window.location.hash = hash;
                     }
                 }
