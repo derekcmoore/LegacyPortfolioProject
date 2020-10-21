@@ -19,7 +19,7 @@ export default class Navigation extends Component {
 
     componentDidMount() {
         window.addEventListener("hashchange", this.changeState, false);
-        if (window.location.hash !== "") this.jumpToPage(window.location.hash);
+        if (window.location.hash !== "") this.jumpToPage(window.location.hash.substr(1));
     }
 
     changeState = () => {
@@ -62,7 +62,7 @@ export default class Navigation extends Component {
                             className="nav-item"
                             href="#about"
                             onClick={() => {
-                                this.jumpToPage("#about");
+                                this.jumpToPage("about");
                             }}
                         >
                             <FaUserAlt className="mr-4 ml-2 nav-user-icon" />
@@ -72,7 +72,7 @@ export default class Navigation extends Component {
                             className="nav-item"
                             href="#skills"
                             onClick={() => {
-                                this.jumpToPage("#skills");
+                                this.jumpToPage("skills");
                             }}
                         >
                             <FaRegChartBar className="mr-4 ml-2 nav-skill-icon" />
@@ -82,7 +82,7 @@ export default class Navigation extends Component {
                             className="nav-item"
                             href="#projects"
                             onClick={() => {
-                                this.jumpToPage("#projects");
+                                this.jumpToPage("projects");
                             }}
                         >
                             <FaFolder className="mr-4 ml-2 nav-project-icon" />
@@ -92,7 +92,7 @@ export default class Navigation extends Component {
                             className="nav-item"
                             href="#education"
                             onClick={() => {
-                                this.jumpToPage("#education");
+                                this.jumpToPage("education");
                             }}
                         >
                             <FaGraduationCap className="mr-4 ml-2 nav-school-icon" />
@@ -102,7 +102,7 @@ export default class Navigation extends Component {
                             className="nav-item"
                             href="#contact"
                             onClick={() => {
-                                this.jumpToPage("#contact");
+                                this.jumpToPage("contact");
                             }}
                         >
                             <FaEnvelope className="mr-4 ml-2 nav-contact-icon" />

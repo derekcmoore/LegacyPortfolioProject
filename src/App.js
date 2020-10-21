@@ -7,90 +7,68 @@ import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
 import Home from "./components/Home/Home";
 import "./App.scss";
-import $ from "jquery";
-import jQuery from "jquery";
 
 class App extends Component {
     getScrollLocation() {
-        jQuery(function () {
-            var sections = {};
-
-            $(".section").each(function () {
-                var hash = $(this).data("hash"),
-                    topOffset = $(this).offset().top;
-                sections[topOffset] = hash;
-            });
-
-            $(window).on("scroll", function () {
-                var scrollTop = $(window).scrollTop();
-                setHash(scrollTop);
-            });
-
-            function setHash(st) {
-                var hash = "";
-                for (var section in sections) {
-                    if (section < st + $(window).height() / 3.5)
-                        hash = sections[section];
-                }
-                if ("#" + hash !== window.location.hash) {
-                    if (!hash && window.location.hash !== "") {
-                        window.location.hash = "home";
-                        let loc = window.location;
-                        window.history.pushState(
-                            "",
-                            document.title,
-                            loc.pathname + loc.search
-                        );
-                    } else if (hash) {
-                        window.location.hash = hash;
-                    }
+        window.onscroll = function () {
+            let elements = document.getElementsByClassName("section");
+            let doc = document.documentElement;
+            let st = window.pageYOffset;
+            let hash = "";
+            let i;
+            for (i = 0; i < elements.length; i++) {
+                let box = elements[i].getBoundingClientRect();
+                let top = box.top + window.pageYOffset - doc.clientTop;
+                if (top > st + window.screen.height / 3.5) {
+                    hash = elements[i - 1].id;
+                    break;
                 }
             }
-        });
+            if (i === elements.length) {
+                hash = elements[elements.length - 1].id;
+            }
+            if ("#" + hash !== window.location.hash) {
+                if (!hash && window.location.hash !== "") {
+                    let loc = window.location;
+                    window.history.pushState(
+                        "",
+                        document.title,
+                        loc.pathname + loc.search
+                    );
+                    window.dispatchEvent(new HashChangeEvent("hashchange"));
+                } else if (hash) {
+                    window.history.replaceState(null, null, "#" + hash);
+                    window.dispatchEvent(new HashChangeEvent("hashchange"));
+                }
+            }
+        };
+    }
+
+    componentDidMount() {
+        this.getScrollLocation();
     }
 
     render() {
-        this.getScrollLocation();
         return (
             <div id="root">
                 <Navigation />
                 <div className="content">
-                    <section id="#home" className="section full-screen">
+                    <section className="section full-screen">
                         <Home />
                     </section>
-                    <section
-                        id="#about"
-                        className="section full-screen"
-                        data-hash="about"
-                    >
+                    <section id="about" className="section full-screen">
                         <About />
                     </section>
-                    <section
-                        id="#skills"
-                        className="section full-screen"
-                        data-hash="skills"
-                    >
+                    <section id="skills" className="section full-screen">
                         <Skills />
                     </section>
-                    <section
-                        id="#projects"
-                        className="section full-screen"
-                        data-hash="projects"
-                    >
+                    <section id="projects" className="section full-screen">
                         <Projects />
                     </section>
-                    <section
-                        id="#education"
-                        className="section full-screen"
-                        data-hash="education"
-                    >
+                    <section id="education" className="section full-screen">
                         <Education />
                     </section>
-                    <section
-                        id="#contact"
-                        className="section full-screen"
-                        data-hash="contact"
-                    >
+                    <section id="contact" className="section full-screen">
                         <Contact />
                     </section>
                 </div>
