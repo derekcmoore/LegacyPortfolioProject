@@ -1,0 +1,131 @@
+.nav-title {
+    text-align: left;
+    padding-left: 1.75em;
+    font-size: 24px;
+    height: 5em;
+    color: #5ad;
+    background-color: rgb(248, 248, 248);
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.navbar {
+    padding: 0rem 1rem !important;
+}
+
+.side-nav {
+    position: fixed;
+    border-right: 1px solid rgb(224, 224, 224);
+    width: 190px;
+    height: calc(100% + 60px);
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+
+    @media screen and (max-width: 991px) {
+        position: fixed;
+        width: 100%;
+        margin-top: 3.55em;
+        height: inherit;
+    }
+}
+
+.center-title {
+    display: none;
+
+    @media screen and (max-width: 991px) {
+        margin-left: 1em;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 24px;
+        font-weight: 500;
+        color: #5ad;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .minimized-nav {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        margin: 0;
+        padding: 0.5em 1em;
+        width: 100%;
+        border-bottom: 1px solid rgb(224, 224, 224);
+        background-color: white;
+    }
+
+    .collapsing {
+        height: auto !important;
+    }
+
+    .flex-column {
+        width: 100%;
+    }
+
+    .nav-title {
+        display: none;
+    }
+
+    .hamburger-button {
+        position: relative;
+    }
+
+    .navbar-light .navbar-toggler {
+        outline: none;
+    }
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    box-shadow: -5px 0px 0px #55aadd inset;
+    background-color: rgb(248, 248, 248);
+    transition: all 0.3s ease-out;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    background-color: rgb(248, 248, 248);
+    padding-left: 1em;
+    transition: all 0.3s ease-out;
+    @media screen and (max-width: 991px) {
+        transition: none;
+        padding-left: 0;
+    }
+}
+
+.navbar-light .navbar-nav .nav-link {
+    transition: all 0.3s ease-out;
+}
+
+.nav-item {
+    font-size: 16px;
+}
+
+.nav-user-icon {
+    color: #55aadd;
+    font-size: 22px;
+}
+
+.nav-project-icon {
+    color: #55dd89;
+    font-size: 24px;
+}
+
+.nav-skill-icon {
+    color: #c255dd;
+    font-size: 24px;
+}
+
+.nav-school-icon {
+    color: #dda755;
+    font-size: 26px;
+}
+
+.nav-resume-icon {
+    color: #2c2c2c;
+    font-size: 22px;
+}
+
+.nav-contact-icon {
+    color: #8f6434;
+    font-size: 22px;
+}
