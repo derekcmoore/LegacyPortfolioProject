@@ -14,6 +14,7 @@
 .info {
     @media screen and (max-width: 991px) {
         position: sticky;
+        z-index: 1;
         top: 3.55em;
     }
 }
