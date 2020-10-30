@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import Navigation from "./components/Navigation/Navigation";
-import About from "./components/About/About";
-import Skills from "./components/Skills/Skills";
-import Projects from "./components/Projects/Projects";
-import Education from "./components/Education/Education";
-import Contact from "./components/Contact/Contact";
-import Home from "./components/Home/Home";
+import About from "./pages/About/About";
+import Skills from "./pages/Skills/Skills";
+import Projects from "./pages/Projects/Projects";
+import Experience from "./pages/Experience/Experience";
+import Contact from "./pages/Contact/Contact";
+import Home from "./pages/Home/Home";
 import "./App.scss";
 
 class App extends Component {
@@ -56,7 +56,7 @@ class App extends Component {
                     <section className="section full-screen">
                         <Home />
                     </section>
-                    <section id="about" className="section full-screen">
+                    <section id="about" className="section">
                         <About />
                     </section>
                     <section id="skills" className="section full-screen">
@@ -65,8 +65,8 @@ class App extends Component {
                     <section id="projects" className="section full-screen">
                         <Projects />
                     </section>
-                    <section id="education" className="section full-screen">
-                        <Education />
+                    <section id="experience" className="section full-screen">
+                        <Experience />
                     </section>
                     <section id="contact" className="section full-screen">
                         <Contact />

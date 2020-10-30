@@ -90,13 +90,13 @@ export default class Navigation extends Component {
                         </Nav.Link>
                         <Nav.Link
                             className="nav-item"
-                            href="#education"
+                            href="#experience"
                             onClick={() => {
-                                this.jumpToPage("education");
+                                this.jumpToPage("experience");
                             }}
                         >
-                            <FaGraduationCap className="mr-4 ml-2 nav-school-icon" />
-                            Education
+                            <FaGraduationCap className="ml-2 nav-school-icon" />
+                            Experience
                         </Nav.Link>
                         <Nav.Link
                             className="nav-item"

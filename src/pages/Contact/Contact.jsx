@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Title from "../Title/Title";
+import Title from "../../components/Title/Title";
 import "./Contact.scss";
 export default class Contact extends Component {
     render() {

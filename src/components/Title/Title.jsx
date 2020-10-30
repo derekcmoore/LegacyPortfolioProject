@@ -7,7 +7,7 @@ export default class Title extends Component {
             className="title"
             style={{ backgroundColor: this.props.backgroundcolor }}
         >
-            <h1>{this.props.name}</h1>
+            <h3>{this.props.name}</h3>
         </div>
     );
   }
