@@ -46,6 +46,8 @@ export default class Experience extends Component {
                 <div className="text">
                     <JobEntry company={this.nelnet()} />
                     <br />
+                    <br />
+                    <br />
                     <JobEntry company={this.dpl()} />
                 </div>
             </div>
