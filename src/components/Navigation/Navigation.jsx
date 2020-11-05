@@ -19,7 +19,8 @@ export default class Navigation extends Component {
 
     componentDidMount() {
         window.addEventListener("hashchange", this.changeState, false);
-        if (window.location.hash !== "") this.jumpToPage(window.location.hash.substr(1));
+        if (window.location.hash !== "")
+            this.jumpToPage(window.location.hash.substr(1));
     }
 
     changeState = () => {
@@ -27,11 +28,21 @@ export default class Navigation extends Component {
     };
 
     jumpToPage(hash) {
-        window.location.hash = hash;
-        var elmnt = document.getElementById(hash);
-        elmnt.scrollIntoView();
-        if (window.innerWidth <= 991) {
-            window.scrollBy(0, -57);
+        if (hash) {
+            window.location.hash = hash;
+            var elmnt = document.getElementById(hash);
+            elmnt.scrollIntoView();
+            if (window.innerWidth <= 991) {
+                window.scrollBy(0, -57);
+            }
+        } else {
+            let loc = window.location;
+            window.history.pushState(
+                "",
+                document.title,
+                loc.pathname + loc.search
+            );
+            window.dispatchEvent(new HashChangeEvent("hashchange"));
         }
     }
 
@@ -54,7 +65,12 @@ export default class Navigation extends Component {
                         className="mr-auto flex-column side-nav"
                         activeKey={this.state.hash}
                     >
-                        <div className="nav-title">
+                        <div
+                            className="nav-title"
+                            onClick={() => {
+                                this.jumpToPage(null);
+                            }}
+                        >
                             <h2 className="mt-3">Derek</h2>
                             <h2 className="mt-1">Moore</h2>
                         </div>

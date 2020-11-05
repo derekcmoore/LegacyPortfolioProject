@@ -28,7 +28,7 @@ class App extends Component {
                 hash = elements[elements.length - 1].id;
             }
             if ("#" + hash !== window.location.hash) {
-                if (!hash && window.location.hash !== "") {
+                if (hash === "home" && window.location.hash !== "") {
                     let loc = window.location;
                     window.history.pushState(
                         "",
@@ -53,7 +53,7 @@ class App extends Component {
             <div id="root">
                 <Navigation />
                 <div className="content">
-                    <section className="section full-screen">
+                    <section id="home" className="section full-screen">
                         <Home />
                     </section>
                     <section id="about" className="section">
@@ -65,7 +65,7 @@ class App extends Component {
                     <section id="projects" className="section full-screen">
                         <Projects />
                     </section>
-                    <section id="experience" className="section full-screen">
+                    <section id="experience" className="section">
                         <Experience />
                     </section>
                     <section id="contact" className="section full-screen">
