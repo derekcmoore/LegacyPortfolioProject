@@ -29,11 +29,12 @@ export default class Navigation extends Component {
 
     jumpToPage(hash) {
         if (hash) {
-            window.location.hash = hash;
+            window.location.hash = "#" + hash;
             var elmnt = document.getElementById(hash);
             elmnt.scrollIntoView();
             if (window.innerWidth <= 991) {
-                window.scrollBy(0, -57);
+                console.log(window.innerWidth);
+                window.scrollBy(0, -56);
             }
         } else {
             let loc = window.location;
@@ -43,6 +44,7 @@ export default class Navigation extends Component {
                 loc.pathname + loc.search
             );
             window.dispatchEvent(new HashChangeEvent("hashchange"));
+            window.scrollBy(0, -1000000);
         }
     }
 
@@ -58,7 +60,14 @@ export default class Navigation extends Component {
                         className="hamburger-button"
                         aria-controls="responsive-navbar-nav"
                     />
-                    <span className="center-title">Derek Moore</span>
+                    <span
+                        className="center-title"
+                        onClick={() => {
+                            this.jumpToPage(null);
+                        }}
+                    >
+                        Derek Moore
+                    </span>
                 </div>
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav
@@ -76,7 +85,6 @@ export default class Navigation extends Component {
                         </div>
                         <Nav.Link
                             className="nav-item"
-                            href="#about"
                             onClick={() => {
                                 this.jumpToPage("about");
                             }}
@@ -86,7 +94,6 @@ export default class Navigation extends Component {
                         </Nav.Link>
                         <Nav.Link
                             className="nav-item"
-                            href="#skills"
                             onClick={() => {
                                 this.jumpToPage("skills");
                             }}
@@ -96,7 +103,6 @@ export default class Navigation extends Component {
                         </Nav.Link>
                         <Nav.Link
                             className="nav-item"
-                            href="#projects"
                             onClick={() => {
                                 this.jumpToPage("projects");
                             }}
@@ -106,7 +112,6 @@ export default class Navigation extends Component {
                         </Nav.Link>
                         <Nav.Link
                             className="nav-item"
-                            href="#experience"
                             onClick={() => {
                                 this.jumpToPage("experience");
                             }}
@@ -116,7 +121,6 @@ export default class Navigation extends Component {
                         </Nav.Link>
                         <Nav.Link
                             className="nav-item"
-                            href="#contact"
                             onClick={() => {
                                 this.jumpToPage("contact");
                             }}

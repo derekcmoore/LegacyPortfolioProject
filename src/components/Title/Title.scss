@@ -3,6 +3,9 @@
     padding: 1em 2em;
 
     @media screen and (max-width: 991px) {
+        position: sticky;
+        z-index: 1;
+        top: 3.55em;
         padding: 0.5em 1em;
         width: 100%;
     }

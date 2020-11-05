@@ -10,23 +10,15 @@
     }
 }
 
-.info {
-    @media screen and (max-width: 991px) {
-        position: sticky;
-        z-index: 1;
-        top: 3.55em;
-    }
-}
-
 .section {
     margin-left: 190px;
 
-    &.full-screen {
-        height: 100vh;
-    }
-
     @media screen and (max-width: 991px) {
         margin-left: 0;
+    }
+
+    &.full-screen {
+        height: 100vh;
     }
 
     .section-margin {
@@ -34,14 +26,13 @@
     }
 }
 
-@media screen and (max-width: 991px) {
-    .section {
-        margin-left: 0;
-    }
-}
-
 .text {
-    margin: 4em 2.5em;
+    padding: 4em 2.5em;
+
+    @media screen and (max-width: 991px) {
+        z-index: 0;
+        padding: 2em 1em;
+    }
 }
 
 body {

@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import Title from "../../components/Title/Title";
 import "./About.scss";
 export default class About extends Component {
     render() {
         return (
             <div className="info">
-                <Title name="About" backgroundcolor="#55aadd" />
                 <div className="text">
                     <blockquote>
                         <h2>

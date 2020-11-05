@@ -14,17 +14,23 @@ export default class JobEntry extends Component {
 
     list(experiences) {
         let rows = [];
-        experiences.forEach((entry) => {
-            rows.push(<li>{entry}</li>);
-        });
+        let name = this.props.company[0];
+        for (let i = 0; i < experiences.length; i++) {
+            rows.push(<li key={name + "_" + i}>{experiences[i]}</li>);
+        }
         return rows;
     }
 
     positions(positions) {
         let list = [];
-        positions.forEach((entry) => {
-            list.push(<div className="position">{entry}</div>);
-        });
+        let name = this.props.company[0];
+        for (let i = 0; i < positions.length; i++) {
+            list.push(
+                <div key={name + "_" + i} className="position">
+                    {positions[i]}
+                </div>
+            );
+        }
         return list;
     }
 
